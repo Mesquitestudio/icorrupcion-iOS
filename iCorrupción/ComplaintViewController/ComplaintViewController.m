@@ -17,20 +17,19 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnPhoto;
 @property (strong, nonatomic) IBOutlet UIButton *btnSite;
 
+@property (strong) CLLocationManager *locationManager;
 @property (strong) UIImageView *imageSelect;
-@property (strong) NSData *videoData;
 @property (strong) UIImagePickerController *cameraPicker;
-@property (strong) UIImagePickerController *videoPicker;
 @property (strong, nonatomic) IBOutlet UIView *imageView;
 @property (strong, nonatomic) IBOutlet UIImageView *image;
+@property (strong) NSData *videoData;
+@property (strong) UIImagePickerController *videoPicker;
 
 @property BOOL bolCamera;
 
 @end
 
-@implementation ComplaintViewController{
-    CLLocationManager *locationManager;
-}
+@implementation ComplaintViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -50,8 +49,18 @@
     self.videoPicker.delegate = self;
     
     //**** Location ****//
-    locationManager = [[CLLocationManager alloc] init];
-
+    self.locationManager = [[CLLocationManager alloc]init];
+    self.locationManager.delegate = self;
+    [self.locationManager requestWhenInUseAuthorization];
+    [self.locationManager startUpdatingLocation];
+    
+    //**** Initial Colors ****//
+    [self.btnAnonymous setBackgroundColor:[UIColor colorWithRed:166/255.0 green:168/255.0 blue:171/255.0 alpha:1]];
+    [self.btnAttachment setBackgroundColor:[UIColor colorWithRed:166/255.0 green:168/255.0 blue:171/255.0 alpha:1]];
+    [self.btnLocation setBackgroundColor:[UIColor colorWithRed:166/255.0 green:168/255.0 blue:171/255.0 alpha:1]];
+    [self.btnVideo setBackgroundColor:[UIColor colorWithRed:166/255.0 green:168/255.0 blue:171/255.0 alpha:1]];
+    [self.btnPhoto setBackgroundColor:[UIColor colorWithRed:166/255.0 green:168/255.0 blue:171/255.0 alpha:1]];
+    [self.btnSite setBackgroundColor:[UIColor colorWithRed:166/255.0 green:168/255.0 blue:171/255.0 alpha:1]];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -85,11 +94,10 @@
 }
 
 - (IBAction)btnLocation:(id)sender {
-    locationManager.delegate = self;
-    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
-    
-    [locationManager startUpdatingLocation];
-    
+    CLLocation *loc = [self.locationManager location];
+    CLLocationCoordinate2D coordinate = [loc coordinate];
+    NSLog(@"%f", coordinate.longitude);
+    NSLog(@"%f", coordinate.latitude);
     [self.btnLocation setBackgroundColor:[UIColor colorWithRed:233/255.0 green:128/255.0 blue:79/255.0 alpha:1]];
 }
 
@@ -133,11 +141,15 @@
                              type:SIAlertViewButtonTypeDestructive
                           handler:^(SIAlertView *alertView) {
                               [self.imageSelect setImage:nil];
+                              [self.btnPhoto setBackgroundColor:[UIColor colorWithRed:166/255.0 green:168/255.0 blue:171/255.0 alpha:1]];
                           }];
     }
     
     [alert addButtonWithTitle:NSLocalizedString(@"Cancelar", @"Opcion Cancelar")
                          type:SIAlertViewButtonTypeCancel handler:^(SIAlertView *alertView) {
+                             if (self.imageSelect.image == nil) {
+                                 [self.btnPhoto setBackgroundColor:[UIColor colorWithRed:166/255.0 green:168/255.0 blue:171/255.0 alpha:1]];
+                             }
                          }];
     
     [alert show];
@@ -235,4 +247,5 @@
         NSLog(@"%f", currentLocation.coordinate.latitude);
     }
 }
+
 @end
