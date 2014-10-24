@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A732B51A819047A8AFB389B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC7840EEEFF4715A4038728 /* libPods.a */; };
+		E331BD1319F54A8A00CB7023 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1219F54A8A00CB7023 /* IntroViewController.m */; };
+		E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */; };
+		E331BD1B19F5635B00CB7023 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1A19F5635B00CB7023 /* User.m */; };
+		E331BD1E19F564C400CB7023 /* Complaint.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1D19F564C400CB7023 /* Complaint.m */; };
+		E331BD2019F57ED500CB7023 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E331BD1F19F57ED500CB7023 /* CoreLocation.framework */; };
+		E33F165E19E43AB3009A90F7 /* ViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F165D19E43AB3009A90F7 /* ViewCell.m */; };
+		E33F166919E44C5A009A90F7 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F166819E44C5A009A90F7 /* InformationViewController.m */; };
+		E33F166E19E451D1009A90F7 /* OfficeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F166D19E451D1009A90F7 /* OfficeViewController.m */; };
+		E33F167119E45212009A90F7 /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F167019E45212009A90F7 /* RateViewController.m */; };
+		E3448F3A19ED8617006BE4A1 /* OfficeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3448F3919ED8617006BE4A1 /* OfficeCell.m */; };
+		E383682F19E2E0F900F85732 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E383682E19E2E0F900F85732 /* main.m */; };
+		E383683219E2E0FA00F85732 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E383683119E2E0FA00F85732 /* AppDelegate.m */; };
+		E383683519E2E0FA00F85732 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E383683419E2E0FA00F85732 /* ViewController.m */; };
+		E383683819E2E0FA00F85732 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E383683619E2E0FA00F85732 /* Main.storyboard */; };
+		E383683A19E2E0FA00F85732 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E383683919E2E0FA00F85732 /* Images.xcassets */; };
+		E383683D19E2E0FA00F85732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E383683B19E2E0FA00F85732 /* LaunchScreen.xib */; };
+		E383684919E2E0FA00F85732 /* iCorrupcio_nTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E383684819E2E0FA00F85732 /* iCorrupcio_nTests.m */; };
+		E383685619E2EB2300F85732 /* ComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E383685419E2EB2300F85732 /* ComplaintViewController.m */; };
+		E3B1254619F0075500E84C2B /* MyDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1254519F0075500E84C2B /* MyDataViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E383684319E2E0FA00F85732 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E383682119E2E0F900F85732 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E383682819E2E0F900F85732;
+			remoteInfo = "iCorrupción";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E331BD1119F54A8A00CB7023 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
+		E331BD1219F54A8A00CB7023 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
+		E331BD1619F5629C00CB7023 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		E331BD1919F5635B00CB7023 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		E331BD1A19F5635B00CB7023 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		E331BD1C19F564C400CB7023 /* Complaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complaint.h; sourceTree = "<group>"; };
+		E331BD1D19F564C400CB7023 /* Complaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complaint.m; sourceTree = "<group>"; };
+		E331BD1F19F57ED500CB7023 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E33F165C19E43AB3009A90F7 /* ViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCell.h; sourceTree = "<group>"; };
+		E33F165D19E43AB3009A90F7 /* ViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCell.m; sourceTree = "<group>"; };
+		E33F166719E44C5A009A90F7 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
+		E33F166819E44C5A009A90F7 /* InformationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InformationViewController.m; sourceTree = "<group>"; };
+		E33F166C19E451D1009A90F7 /* OfficeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeViewController.h; sourceTree = "<group>"; };
+		E33F166D19E451D1009A90F7 /* OfficeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeViewController.m; sourceTree = "<group>"; };
+		E33F166F19E45212009A90F7 /* RateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RateViewController.h; sourceTree = "<group>"; };
+		E33F167019E45212009A90F7 /* RateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateViewController.m; sourceTree = "<group>"; };
+		E3448F3819ED8617006BE4A1 /* OfficeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeCell.h; sourceTree = "<group>"; };
+		E3448F3919ED8617006BE4A1 /* OfficeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeCell.m; sourceTree = "<group>"; };
+		E383682919E2E0F900F85732 /* iCorrupción.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iCorrupción.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E383682D19E2E0F900F85732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E383682E19E2E0F900F85732 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E383683019E2E0F900F85732 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E383683119E2E0FA00F85732 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E383683319E2E0FA00F85732 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E383683419E2E0FA00F85732 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E383683719E2E0FA00F85732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E383683919E2E0FA00F85732 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E383683C19E2E0FA00F85732 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E383684219E2E0FA00F85732 /* iCorrupciónTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iCorrupciónTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E383684719E2E0FA00F85732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E383684819E2E0FA00F85732 /* iCorrupcio_nTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCorrupcio_nTests.m; sourceTree = "<group>"; };
+		E383685319E2EB2300F85732 /* ComplaintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintViewController.h; sourceTree = "<group>"; };
+		E383685419E2EB2300F85732 /* ComplaintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplaintViewController.m; sourceTree = "<group>"; };
+		E3B1254419F0075500E84C2B /* MyDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataViewController.h; sourceTree = "<group>"; };
+		E3B1254519F0075500E84C2B /* MyDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataViewController.m; sourceTree = "<group>"; };
+		E9F191F1E2B74C6F96311346 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		ECC7840EEEFF4715A4038728 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E383682619E2E0F900F85732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E331BD2019F57ED500CB7023 /* CoreLocation.framework in Frameworks */,
+				A732B51A819047A8AFB389B1 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E383683F19E2E0FA00F85732 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		60AC7F83B6AE44BDAF604607 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E331BD1F19F57ED500CB7023 /* CoreLocation.framework */,
+				ECC7840EEEFF4715A4038728 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E331BD0F19F54A3F00CB7023 /* IntroViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E331BD1119F54A8A00CB7023 /* IntroViewController.h */,
+				E331BD1219F54A8A00CB7023 /* IntroViewController.m */,
+			);
+			path = IntroViewController;
+			sourceTree = "<group>";
+		};
+		E331BD1419F5626000CB7023 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */,
+				E331BD1C19F564C400CB7023 /* Complaint.h */,
+				E331BD1D19F564C400CB7023 /* Complaint.m */,
+				E331BD1919F5635B00CB7023 /* User.h */,
+				E331BD1A19F5635B00CB7023 /* User.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E33F165A19E43A6E009A90F7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E33F165B19E43A85009A90F7 /* ViewCell */,
+				E383683319E2E0FA00F85732 /* ViewController.h */,
+				E383683419E2E0FA00F85732 /* ViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		E33F165B19E43A85009A90F7 /* ViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E33F165C19E43AB3009A90F7 /* ViewCell.h */,
+				E33F165D19E43AB3009A90F7 /* ViewCell.m */,
+			);
+			path = ViewCell;
+			sourceTree = "<group>";
+		};
+		E33F166A19E45186009A90F7 /* OfficeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3448F3719ED85F1006BE4A1 /* OfficeCell */,
+				E33F166C19E451D1009A90F7 /* OfficeViewController.h */,
+				E33F166D19E451D1009A90F7 /* OfficeViewController.m */,
+			);
+			path = OfficeViewController;
+			sourceTree = "<group>";
+		};
+		E33F166B19E45186009A90F7 /* RateViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E33F166F19E45212009A90F7 /* RateViewController.h */,
+				E33F167019E45212009A90F7 /* RateViewController.m */,
+			);
+			path = RateViewController;
+			sourceTree = "<group>";
+		};
+		E3448F3719ED85F1006BE4A1 /* OfficeCell */ = {
+			isa = PBXGroup;
+			children = (
+				E3448F3819ED8617006BE4A1 /* OfficeCell.h */,
+				E3448F3919ED8617006BE4A1 /* OfficeCell.m */,
+			);
+			path = OfficeCell;
+			sourceTree = "<group>";
+		};
+		E383682019E2E0F900F85732 = {
+			isa = PBXGroup;
+			children = (
+				E383682B19E2E0F900F85732 /* iCorrupción */,
+				E383684519E2E0FA00F85732 /* iCorrupciónTests */,
+				E383682A19E2E0F900F85732 /* Products */,
+				E9F191F1E2B74C6F96311346 /* Pods.xcconfig */,
+				60AC7F83B6AE44BDAF604607 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		E383682A19E2E0F900F85732 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E383682919E2E0F900F85732 /* iCorrupción.app */,
+				E383684219E2E0FA00F85732 /* iCorrupciónTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E383682B19E2E0F900F85732 /* iCorrupción */ = {
+			isa = PBXGroup;
+			children = (
+				E331BD1419F5626000CB7023 /* Model */,
+				E383683019E2E0F900F85732 /* AppDelegate.h */,
+				E383683119E2E0FA00F85732 /* AppDelegate.m */,
+				E383683619E2E0FA00F85732 /* Main.storyboard */,
+				E33F165A19E43A6E009A90F7 /* ViewController */,
+				E383685219E2EAD300F85732 /* ComplaintViewController */,
+				E383685819E2F71A00F85732 /* InformationViewController */,
+				E383683919E2E0FA00F85732 /* Images.xcassets */,
+				E383683B19E2E0FA00F85732 /* LaunchScreen.xib */,
+				E383682C19E2E0F900F85732 /* Supporting Files */,
+			);
+			path = "iCorrupción";
+			sourceTree = "<group>";
+		};
+		E383682C19E2E0F900F85732 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E383682D19E2E0F900F85732 /* Info.plist */,
+				E383682E19E2E0F900F85732 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E383684519E2E0FA00F85732 /* iCorrupciónTests */ = {
+			isa = PBXGroup;
+			children = (
+				E383684819E2E0FA00F85732 /* iCorrupcio_nTests.m */,
+				E383684619E2E0FA00F85732 /* Supporting Files */,
+			);
+			path = "iCorrupciónTests";
+			sourceTree = "<group>";
+		};
+		E383684619E2E0FA00F85732 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E383684719E2E0FA00F85732 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E383685219E2EAD300F85732 /* ComplaintViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E383685319E2EB2300F85732 /* ComplaintViewController.h */,
+				E383685419E2EB2300F85732 /* ComplaintViewController.m */,
+			);
+			path = ComplaintViewController;
+			sourceTree = "<group>";
+		};
+		E383685819E2F71A00F85732 /* InformationViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E331BD0F19F54A3F00CB7023 /* IntroViewController */,
+				E3B1254319F0065400E84C2B /* MyDataViewController */,
+				E33F166A19E45186009A90F7 /* OfficeViewController */,
+				E33F166B19E45186009A90F7 /* RateViewController */,
+				E33F166719E44C5A009A90F7 /* InformationViewController.h */,
+				E33F166819E44C5A009A90F7 /* InformationViewController.m */,
+			);
+			path = InformationViewController;
+			sourceTree = "<group>";
+		};
+		E3B1254319F0065400E84C2B /* MyDataViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E3B1254419F0075500E84C2B /* MyDataViewController.h */,
+				E3B1254519F0075500E84C2B /* MyDataViewController.m */,
+			);
+			path = MyDataViewController;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E383682819E2E0F900F85732 /* iCorrupción */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E383684C19E2E0FA00F85732 /* Build configuration list for PBXNativeTarget "iCorrupción" */;
+			buildPhases = (
+				52961703AA7A45949E503C58 /* Check Pods Manifest.lock */,
+				E383682519E2E0F900F85732 /* Sources */,
+				E383682619E2E0F900F85732 /* Frameworks */,
+				E383682719E2E0F900F85732 /* Resources */,
+				4DCEBC8599B34F26AF031EE7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iCorrupción";
+			productName = "iCorrupción";
+			productReference = E383682919E2E0F900F85732 /* iCorrupción.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E383684119E2E0FA00F85732 /* iCorrupciónTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E383684F19E2E0FA00F85732 /* Build configuration list for PBXNativeTarget "iCorrupciónTests" */;
+			buildPhases = (
+				E383683E19E2E0FA00F85732 /* Sources */,
+				E383683F19E2E0FA00F85732 /* Frameworks */,
+				E383684019E2E0FA00F85732 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E383684419E2E0FA00F85732 /* PBXTargetDependency */,
+			);
+			name = "iCorrupciónTests";
+			productName = "iCorrupciónTests";
+			productReference = E383684219E2E0FA00F85732 /* iCorrupciónTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E383682119E2E0F900F85732 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = com.mesquitestudio;
+				TargetAttributes = {
+					E383682819E2E0F900F85732 = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					E383684119E2E0FA00F85732 = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = E383682819E2E0F900F85732;
+					};
+				};
+			};
+			buildConfigurationList = E383682419E2E0F900F85732 /* Build configuration list for PBXProject "iCorrupción" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E383682019E2E0F900F85732;
+			productRefGroup = E383682A19E2E0F900F85732 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E383682819E2E0F900F85732 /* iCorrupción */,
+				E383684119E2E0FA00F85732 /* iCorrupciónTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E383682719E2E0F900F85732 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E383683819E2E0FA00F85732 /* Main.storyboard in Resources */,
+				E383683D19E2E0FA00F85732 /* LaunchScreen.xib in Resources */,
+				E383683A19E2E0FA00F85732 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E383684019E2E0FA00F85732 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4DCEBC8599B34F26AF031EE7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		52961703AA7A45949E503C58 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E383682519E2E0F900F85732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E331BD1B19F5635B00CB7023 /* User.m in Sources */,
+				E3448F3A19ED8617006BE4A1 /* OfficeCell.m in Sources */,
+				E33F166E19E451D1009A90F7 /* OfficeViewController.m in Sources */,
+				E383683519E2E0FA00F85732 /* ViewController.m in Sources */,
+				E33F167119E45212009A90F7 /* RateViewController.m in Sources */,
+				E3B1254619F0075500E84C2B /* MyDataViewController.m in Sources */,
+				E383683219E2E0FA00F85732 /* AppDelegate.m in Sources */,
+				E33F165E19E43AB3009A90F7 /* ViewCell.m in Sources */,
+				E331BD1319F54A8A00CB7023 /* IntroViewController.m in Sources */,
+				E331BD1E19F564C400CB7023 /* Complaint.m in Sources */,
+				E33F166919E44C5A009A90F7 /* InformationViewController.m in Sources */,
+				E383685619E2EB2300F85732 /* ComplaintViewController.m in Sources */,
+				E383682F19E2E0F900F85732 /* main.m in Sources */,
+				E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E383683E19E2E0FA00F85732 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E383684919E2E0FA00F85732 /* iCorrupcio_nTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E383684419E2E0FA00F85732 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E383682819E2E0F900F85732 /* iCorrupción */;
+			targetProxy = E383684319E2E0FA00F85732 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E383683619E2E0FA00F85732 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E383683719E2E0FA00F85732 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E383683B19E2E0FA00F85732 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E383683C19E2E0FA00F85732 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E383684A19E2E0FA00F85732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E383684B19E2E0FA00F85732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E383684D19E2E0FA00F85732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9F191F1E2B74C6F96311346 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "iCorrupción/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E383684E19E2E0FA00F85732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9F191F1E2B74C6F96311346 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "iCorrupción/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E383685019E2E0FA00F85732 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iCorrupciónTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCorrupción.app/iCorrupción";
+			};
+			name = Debug;
+		};
+		E383685119E2E0FA00F85732 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "iCorrupciónTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iCorrupción.app/iCorrupción";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E383682419E2E0F900F85732 /* Build configuration list for PBXProject "iCorrupción" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E383684A19E2E0FA00F85732 /* Debug */,
+				E383684B19E2E0FA00F85732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E383684C19E2E0FA00F85732 /* Build configuration list for PBXNativeTarget "iCorrupción" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E383684D19E2E0FA00F85732 /* Debug */,
+				E383684E19E2E0FA00F85732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E383684F19E2E0FA00F85732 /* Build configuration list for PBXNativeTarget "iCorrupciónTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E383685019E2E0FA00F85732 /* Debug */,
+				E383685119E2E0FA00F85732 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E331BD1619F5629C00CB7023 /* Model.xcdatamodel */,
+			);
+			currentVersion = E331BD1619F5629C00CB7023 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = E383682119E2E0F900F85732 /* Project object */;
+}
