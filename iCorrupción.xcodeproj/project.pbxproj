@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		A732B51A819047A8AFB389B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC7840EEEFF4715A4038728 /* libPods.a */; };
-		E31707F61A00135C00380E15 /* IAClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E31707F51A00135C00380E15 /* IAClient.m */; };
 		E331BD1319F54A8A00CB7023 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1219F54A8A00CB7023 /* IntroViewController.m */; };
 		E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */; };
 		E331BD1B19F5635B00CB7023 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1A19F5635B00CB7023 /* User.m */; };
@@ -27,6 +26,7 @@
 		E33F166E19E451D1009A90F7 /* OfficeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F166D19E451D1009A90F7 /* OfficeViewController.m */; };
 		E33F167119E45212009A90F7 /* RateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F167019E45212009A90F7 /* RateViewController.m */; };
 		E3448F3A19ED8617006BE4A1 /* OfficeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E3448F3919ED8617006BE4A1 /* OfficeCell.m */; };
+		E37297CC1A029584009BF65D /* IAClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E37297CB1A029584009BF65D /* IAClient.m */; };
 		E383682F19E2E0F900F85732 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E383682E19E2E0F900F85732 /* main.m */; };
 		E383683219E2E0FA00F85732 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E383683119E2E0FA00F85732 /* AppDelegate.m */; };
 		E383683519E2E0FA00F85732 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E383683419E2E0FA00F85732 /* ViewController.m */; };
@@ -49,8 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E31707F41A00135C00380E15 /* IAClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAClient.h; sourceTree = "<group>"; };
-		E31707F51A00135C00380E15 /* IAClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAClient.m; sourceTree = "<group>"; };
 		E331BD1119F54A8A00CB7023 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		E331BD1219F54A8A00CB7023 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		E331BD1619F5629C00CB7023 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -79,6 +77,8 @@
 		E33F167019E45212009A90F7 /* RateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RateViewController.m; sourceTree = "<group>"; };
 		E3448F3819ED8617006BE4A1 /* OfficeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeCell.h; sourceTree = "<group>"; };
 		E3448F3919ED8617006BE4A1 /* OfficeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeCell.m; sourceTree = "<group>"; };
+		E37297CA1A029584009BF65D /* IAClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAClient.h; sourceTree = "<group>"; };
+		E37297CB1A029584009BF65D /* IAClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAClient.m; sourceTree = "<group>"; };
 		E383682919E2E0F900F85732 /* iCorrupción.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iCorrupción.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E383682D19E2E0F900F85732 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E383682E19E2E0F900F85732 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -144,8 +144,8 @@
 		E31707F31A0012F700380E15 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				E31707F41A00135C00380E15 /* IAClient.h */,
-				E31707F51A00135C00380E15 /* IAClient.m */,
+				E37297CA1A029584009BF65D /* IAClient.h */,
+				E37297CB1A029584009BF65D /* IAClient.m */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -474,8 +474,8 @@
 				E33F166919E44C5A009A90F7 /* InformationViewController.m in Sources */,
 				E383685619E2EB2300F85732 /* ComplaintViewController.m in Sources */,
 				E383682F19E2E0F900F85732 /* main.m in Sources */,
+				E37297CC1A029584009BF65D /* IAClient.m in Sources */,
 				E334064819FEBBA3001D5B21 /* MapDropPinViewController.m in Sources */,
-				E31707F61A00135C00380E15 /* IAClient.m in Sources */,
 				E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

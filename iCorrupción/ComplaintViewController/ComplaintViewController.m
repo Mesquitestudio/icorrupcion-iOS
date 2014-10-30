@@ -201,13 +201,27 @@
         NSMutableDictionary *paramsDict = [NSMutableDictionary dictionaryWithDictionary:
                                            @{@"cname":self.txtTitle.text,
                                              @"cdescription":self.txtDescription.text,
-                                             @"uname":@"Eleazar Rdz",
-                                             @"uphone":@"6846546847684",
-                                             @"uaddress":@"65ddvjknvdkj",
-                                             @"uemail":@"2",
-                                             @"ulatitude":@"414",
-                                             @"ulongitude":@"414"
                                              }];
+        
+        if (self.bolAnonymouse) {
+            NSMutableDictionary  *UserDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserDictionary"];
+            [paramsDict setObject:[UserDictionary objectForKey:@"uname"] forKey:@"uname"];
+            [paramsDict setObject:[UserDictionary objectForKey:@"uemail"] forKey:@"uemail"];
+            [paramsDict setObject:[UserDictionary objectForKey:@"uaddress"] forKey:@"uaddress"];
+            [paramsDict setObject:[UserDictionary objectForKey:@"uphone"] forKey:@"uphone"];
+        }
+        
+        else{
+            [paramsDict setObject:@"" forKey:@"uname"];
+            [paramsDict setObject:@"" forKey:@"uemail"];
+            [paramsDict setObject:@"" forKey:@"uaddress"];
+            [paramsDict setObject:@"" forKey:@"uphone"];
+        }
+        
+        if(self.ComplaintCoordinate.latitude) [paramsDict setObject:[NSString stringWithFormat:@"%f", self.ComplaintCoordinate.latitude] forKey:@"ulatitude"];
+        else [paramsDict setObject:@"" forKey:@"ulatitude"];
+        if(self.ComplaintCoordinate.longitude) [paramsDict setObject:[NSString stringWithFormat:@"%f", self.ComplaintCoordinate.longitude] forKey:@"ulongitude"];
+        else [paramsDict setObject:@""  forKey:@"ulongitude"];
         
         if(self.ComplaintSiteLatitude) [paramsDict setObject:self.ComplaintSiteLatitude forKey:@"latitude"];
         else [paramsDict setObject:@"" forKey:@"latitude"];
