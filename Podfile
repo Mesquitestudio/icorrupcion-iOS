@@ -3,3 +3,4 @@ pod "MZFormSheetController"
 pod 'EDStarRating'
 pod "SIAlertView"
 pod "Mantle"
+pod "AFNetworking"

@@ -8,11 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		A732B51A819047A8AFB389B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC7840EEEFF4715A4038728 /* libPods.a */; };
+		E31707F61A00135C00380E15 /* IAClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E31707F51A00135C00380E15 /* IAClient.m */; };
 		E331BD1319F54A8A00CB7023 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1219F54A8A00CB7023 /* IntroViewController.m */; };
 		E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */; };
 		E331BD1B19F5635B00CB7023 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1A19F5635B00CB7023 /* User.m */; };
 		E331BD1E19F564C400CB7023 /* Complaint.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1D19F564C400CB7023 /* Complaint.m */; };
 		E331BD2019F57ED500CB7023 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E331BD1F19F57ED500CB7023 /* CoreLocation.framework */; };
+		E334063719FE9A8C001D5B21 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E334063619FE9A8C001D5B21 /* AssetsLibrary.framework */; };
+		E334063919FE9A94001D5B21 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E334063819FE9A94001D5B21 /* AVFoundation.framework */; };
+		E334063B19FE9A9D001D5B21 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E334063A19FE9A9D001D5B21 /* CoreMedia.framework */; };
+		E334063D19FE9AA5001D5B21 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E334063C19FE9AA5001D5B21 /* MediaPlayer.framework */; };
+		E334063F19FE9AAC001D5B21 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E334063E19FE9AAC001D5B21 /* MobileCoreServices.framework */; };
+		E334064119FE9AB3001D5B21 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E334064019FE9AB2001D5B21 /* QuartzCore.framework */; };
+		E334064719FEBBA3001D5B21 /* CustomAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = E334064419FEBBA3001D5B21 /* CustomAnnotation.m */; };
+		E334064819FEBBA3001D5B21 /* MapDropPinViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E334064619FEBBA3001D5B21 /* MapDropPinViewController.m */; };
 		E33F165E19E43AB3009A90F7 /* ViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F165D19E43AB3009A90F7 /* ViewCell.m */; };
 		E33F166919E44C5A009A90F7 /* InformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F166819E44C5A009A90F7 /* InformationViewController.m */; };
 		E33F166E19E451D1009A90F7 /* OfficeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E33F166D19E451D1009A90F7 /* OfficeViewController.m */; };
@@ -40,6 +49,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E31707F41A00135C00380E15 /* IAClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IAClient.h; sourceTree = "<group>"; };
+		E31707F51A00135C00380E15 /* IAClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAClient.m; sourceTree = "<group>"; };
 		E331BD1119F54A8A00CB7023 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		E331BD1219F54A8A00CB7023 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		E331BD1619F5629C00CB7023 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -48,6 +59,16 @@
 		E331BD1C19F564C400CB7023 /* Complaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complaint.h; sourceTree = "<group>"; };
 		E331BD1D19F564C400CB7023 /* Complaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complaint.m; sourceTree = "<group>"; };
 		E331BD1F19F57ED500CB7023 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		E334063619FE9A8C001D5B21 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		E334063819FE9A94001D5B21 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E334063A19FE9A9D001D5B21 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		E334063C19FE9AA5001D5B21 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		E334063E19FE9AAC001D5B21 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E334064019FE9AB2001D5B21 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		E334064319FEBBA3001D5B21 /* CustomAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomAnnotation.h; sourceTree = "<group>"; };
+		E334064419FEBBA3001D5B21 /* CustomAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomAnnotation.m; sourceTree = "<group>"; };
+		E334064519FEBBA3001D5B21 /* MapDropPinViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDropPinViewController.h; sourceTree = "<group>"; };
+		E334064619FEBBA3001D5B21 /* MapDropPinViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDropPinViewController.m; sourceTree = "<group>"; };
 		E33F165C19E43AB3009A90F7 /* ViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewCell.h; sourceTree = "<group>"; };
 		E33F165D19E43AB3009A90F7 /* ViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewCell.m; sourceTree = "<group>"; };
 		E33F166719E44C5A009A90F7 /* InformationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InformationViewController.h; sourceTree = "<group>"; };
@@ -84,6 +105,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E334064119FE9AB3001D5B21 /* QuartzCore.framework in Frameworks */,
+				E334063F19FE9AAC001D5B21 /* MobileCoreServices.framework in Frameworks */,
+				E334063D19FE9AA5001D5B21 /* MediaPlayer.framework in Frameworks */,
+				E334063B19FE9A9D001D5B21 /* CoreMedia.framework in Frameworks */,
+				E334063919FE9A94001D5B21 /* AVFoundation.framework in Frameworks */,
+				E334063719FE9A8C001D5B21 /* AssetsLibrary.framework in Frameworks */,
 				E331BD2019F57ED500CB7023 /* CoreLocation.framework in Frameworks */,
 				A732B51A819047A8AFB389B1 /* libPods.a in Frameworks */,
 			);
@@ -102,10 +129,25 @@
 		60AC7F83B6AE44BDAF604607 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E334064019FE9AB2001D5B21 /* QuartzCore.framework */,
+				E334063E19FE9AAC001D5B21 /* MobileCoreServices.framework */,
+				E334063C19FE9AA5001D5B21 /* MediaPlayer.framework */,
+				E334063A19FE9A9D001D5B21 /* CoreMedia.framework */,
+				E334063819FE9A94001D5B21 /* AVFoundation.framework */,
+				E334063619FE9A8C001D5B21 /* AssetsLibrary.framework */,
 				E331BD1F19F57ED500CB7023 /* CoreLocation.framework */,
 				ECC7840EEEFF4715A4038728 /* libPods.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E31707F31A0012F700380E15 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				E31707F41A00135C00380E15 /* IAClient.h */,
+				E31707F51A00135C00380E15 /* IAClient.m */,
+			);
+			path = Networking;
 			sourceTree = "<group>";
 		};
 		E331BD0F19F54A3F00CB7023 /* IntroViewController */ = {
@@ -127,6 +169,17 @@
 				E331BD1A19F5635B00CB7023 /* User.m */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		E334064219FEBB2B001D5B21 /* MapDropPinViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E334064319FEBBA3001D5B21 /* CustomAnnotation.h */,
+				E334064419FEBBA3001D5B21 /* CustomAnnotation.m */,
+				E334064519FEBBA3001D5B21 /* MapDropPinViewController.h */,
+				E334064619FEBBA3001D5B21 /* MapDropPinViewController.m */,
+			);
+			path = MapDropPinViewController;
 			sourceTree = "<group>";
 		};
 		E33F165A19E43A6E009A90F7 /* ViewController */ = {
@@ -199,6 +252,7 @@
 		E383682B19E2E0F900F85732 /* iCorrupción */ = {
 			isa = PBXGroup;
 			children = (
+				E31707F31A0012F700380E15 /* Networking */,
 				E331BD1419F5626000CB7023 /* Model */,
 				E383683019E2E0F900F85732 /* AppDelegate.h */,
 				E383683119E2E0FA00F85732 /* AppDelegate.m */,
@@ -242,6 +296,7 @@
 		E383685219E2EAD300F85732 /* ComplaintViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E334064219FEBB2B001D5B21 /* MapDropPinViewController */,
 				E383685319E2EB2300F85732 /* ComplaintViewController.h */,
 				E383685419E2EB2300F85732 /* ComplaintViewController.m */,
 			);
@@ -405,6 +460,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E334064719FEBBA3001D5B21 /* CustomAnnotation.m in Sources */,
 				E331BD1B19F5635B00CB7023 /* User.m in Sources */,
 				E3448F3A19ED8617006BE4A1 /* OfficeCell.m in Sources */,
 				E33F166E19E451D1009A90F7 /* OfficeViewController.m in Sources */,
@@ -418,6 +474,8 @@
 				E33F166919E44C5A009A90F7 /* InformationViewController.m in Sources */,
 				E383685619E2EB2300F85732 /* ComplaintViewController.m in Sources */,
 				E383682F19E2E0F900F85732 /* main.m in Sources */,
+				E334064819FEBBA3001D5B21 /* MapDropPinViewController.m in Sources */,
+				E31707F61A00135C00380E15 /* IAClient.m in Sources */,
 				E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -542,6 +600,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iCorrupción/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -553,6 +612,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iCorrupción/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
