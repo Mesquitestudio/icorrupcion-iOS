@@ -464,6 +464,9 @@
                                 <state key="normal" title="Enviar">
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSend:" destination="qBv-AW-AS0" eventType="touchUpInside" id="QGe-qy-50W"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FzY-bl-heW" userLabel="description view">
                                 <rect key="frame" x="13" y="175" width="295" height="50"/>
@@ -550,6 +553,7 @@
                         <outlet property="btnAttachment" destination="tyG-Cd-Kn0" id="RI1-kQ-bX3"/>
                         <outlet property="btnLocation" destination="pwQ-Ea-C9e" id="HPh-IR-AEq"/>
                         <outlet property="btnPhoto" destination="hGW-LH-Mb6" id="8A8-ke-T1v"/>
+                        <outlet property="btnSend" destination="B5H-Kz-d4O" id="PM3-sw-2Sv"/>
                         <outlet property="btnSite" destination="t5h-xw-suZ" id="XMu-Aj-crh"/>
                         <outlet property="btnVideo" destination="1c8-5r-t1Z" id="yOO-ag-fS7"/>
                         <outlet property="txtDescription" destination="OaS-vt-r2n" id="pdb-6Y-4kx"/>

@@ -8,6 +8,7 @@
 
 #import "ComplaintViewController.h"
 #import "MapDropPinViewController.h"
+#import "IAClient.h"
 #import "SIAlertView.h"
 
 @interface ComplaintViewController () <MapDropPinViewControllerDelegate>
@@ -18,6 +19,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *btnVideo;
 @property (strong, nonatomic) IBOutlet UIButton *btnPhoto;
 @property (strong, nonatomic) IBOutlet UIButton *btnSite;
+@property (strong, nonatomic) IBOutlet UIButton *btnSend;
 @property (strong, nonatomic) IBOutlet UITextField *txtTitle;
 @property (strong, nonatomic) IBOutlet UITextField *txtDescription;
 
@@ -179,6 +181,52 @@
     }
 }
 
+#pragma mark - save
+
+- (BOOL)validateComplaint
+{
+    if(self.txtTitle.text.length == 0 && self.txtDescription.text.length == 0){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Aviso", @"Titulo de alerta para nombre faltante en entidad") message:NSLocalizedString(@"El título y la denuncia no pueden estar vacíos", @"Aviso") delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+        return NO;
+    }
+    return YES;
+}
+
+- (IBAction)btnSend:(id)sender
+{
+    if([self validateComplaint])
+    {
+        
+        NSMutableDictionary *paramsDict = [NSMutableDictionary dictionaryWithDictionary:
+                                           @{@"cname":self.txtTitle.text,
+                                             @"cdescription":self.txtDescription.text,
+                                             @"uname":@"Eleazar Rdz",
+                                             @"uphone":@"6846546847684",
+                                             @"uaddress":@"65ddvjknvdkj",
+                                             @"uemail":@"2",
+                                             @"ulatitude":@"414",
+                                             @"ulongitude":@"414"
+                                             }];
+        
+        if(self.ComplaintSiteLatitude) [paramsDict setObject:self.ComplaintSiteLatitude forKey:@"latitude"];
+        else [paramsDict setObject:@"" forKey:@"latitude"];
+        if(self.ComplaintSiteLongitude) [paramsDict setObject:self.ComplaintSiteLongitude forKey:@"longitude"];
+        else [paramsDict setObject:@""  forKey:@"longitude"];
+        
+        [[IAClient sharedClient] sendComplaintWithParams:paramsDict image:self.ComplaintImage video:self.ComplaintVideo onCompletion:^(NSDictionary *responseObject, NSError *responseError){
+            
+            if(!responseError){
+                NSLog(@"enviado");
+            }else{
+                NSLog(@"no enviado");
+            }
+            
+        }];
+    }
+}
+
+
 -(void)locationAlert{
     SIAlertView *alert = [[SIAlertView alloc] initWithTitle:NSLocalizedString(@"Aviso", @"Titulo de alerta cuando se va agregar ubicación")
                                                  andMessage:NSLocalizedString(@"¿Deseas enviar tu ubicación actual?", @"Titulo de alerta cuando se va agregar ubicación")];
@@ -331,13 +379,13 @@
 #pragma mark - CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    NSLog(@"didFailWithError: %@", error);
+    //NSLog(@"didFailWithError: %@", error);
     self.bolErrorLocation = true;
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
 {
-    NSLog(@"didUpdateToLocation: %@", newLocation);
+    //NSLog(@"didUpdateToLocation: %@", newLocation);
     self.bolErrorLocation = false;
 }
 
