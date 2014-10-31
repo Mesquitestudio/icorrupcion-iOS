@@ -16,4 +16,7 @@ typedef void (^FetchDataCompletionBlock)(NSDictionary *responseObject, NSError *
 #pragma mark - send Complaint
 -(void)sendComplaintWithParams:(NSDictionary *)paramsDict image:(UIImage *)image video:(NSData *)video onCompletion:(FetchDataCompletionBlock)completionBlock;
 
+#pragma mark - send Rate
+-(void)sendRateWithParams:(NSDictionary *)paramsDict onCompletion:(FetchDataCompletionBlock)completionBlock;
+
 @end

@@ -354,6 +354,9 @@
                                 <state key="normal" title="Enviar">
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSend:" destination="Zgv-BF-bqh" eventType="touchUpInside" id="ryq-Uc-3WF"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HfP-DV-OZE" customClass="EDStarRating">
                                 <rect key="frame" x="16" y="273" width="288" height="52"/>
@@ -364,7 +367,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Califícanos" id="A6A-1l-Wsv"/>
                     <connections>
+                        <outlet property="btnSend" destination="5Ww-96-Jen" id="LT6-fe-03j"/>
                         <outlet property="starRatingImage" destination="HfP-DV-OZE" id="7zy-RV-Y1O"/>
+                        <outlet property="txtDescription" destination="vJx-T7-BRF" id="mas-CB-qhd"/>
+                        <outlet property="txtTitle" destination="q8g-Fr-tQI" id="8jY-DY-9j7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCT-Hj-2Cz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -584,6 +590,9 @@
                                 <state key="normal" title="Guardar">
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSave:" destination="NbY-XF-NLq" eventType="touchUpInside" id="BNn-oP-mVU"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ahd-rw-Qfe" userLabel="email view">
                                 <rect key="frame" x="13" y="175" width="295" height="50"/>
@@ -669,6 +678,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Mis Datos" id="6D0-f3-go7"/>
+                    <connections>
+                        <outlet property="btnSave" destination="EMI-ts-XKC" id="PqP-dj-fPV"/>
+                        <outlet property="txtAddress" destination="20B-4M-GtT" id="T0r-pe-7bk"/>
+                        <outlet property="txtEmail" destination="TKP-Pr-4fb" id="G1b-IN-jiS"/>
+                        <outlet property="txtName" destination="ztE-uq-RGi" id="Xip-TP-tSU"/>
+                        <outlet property="txtPhone" destination="IrI-HN-Ri0" id="ht7-nK-0bo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="umW-dX-0Il" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

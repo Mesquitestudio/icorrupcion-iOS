@@ -72,6 +72,23 @@ static NSString *const kApplaudorAPIBaseURLString = @"http://192.168.120.24:8820
     }];
 }
 
+#pragma mark - send Rate
+-(void)sendRateWithParams:(NSDictionary *)paramsDict onCompletion:(FetchDataCompletionBlock)completionBlock{
+    
+    NSString *path = [NSString stringWithFormat:@"ranking"];
+    
+    [self POST:path parameters:paramsDict success:^(NSURLSessionDataTask *task, id responseObject) {
+        DLog(@"\n============= Entities search Success ===\n%@",responseObject);
+        
+        completionBlock(responseObject, nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        DLog(@"\n============== ERROR Sending ====\n%@",error.userInfo);
+        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
+        DLog(@"Response statusCode: %li", (long)response.statusCode);
+        completionBlock(nil, error);
+    }];
+}
+
 
 #pragma mark - Methods
 
