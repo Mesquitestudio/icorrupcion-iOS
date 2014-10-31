@@ -354,6 +354,9 @@
                                 <state key="normal" title="Enviar">
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btnSend:" destination="Zgv-BF-bqh" eventType="touchUpInside" id="ryq-Uc-3WF"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HfP-DV-OZE" customClass="EDStarRating">
                                 <rect key="frame" x="16" y="273" width="288" height="52"/>
@@ -364,7 +367,10 @@
                     </view>
                     <navigationItem key="navigationItem" title="Califícanos" id="A6A-1l-Wsv"/>
                     <connections>
+                        <outlet property="btnSend" destination="5Ww-96-Jen" id="LT6-fe-03j"/>
                         <outlet property="starRatingImage" destination="HfP-DV-OZE" id="7zy-RV-Y1O"/>
+                        <outlet property="txtDescription" destination="vJx-T7-BRF" id="mas-CB-qhd"/>
+                        <outlet property="txtTitle" destination="q8g-Fr-tQI" id="8jY-DY-9j7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vCT-Hj-2Cz" userLabel="First Responder" sceneMemberID="firstResponder"/>

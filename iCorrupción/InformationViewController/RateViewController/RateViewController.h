@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "EDStarRating.h"
 
-@interface RateViewController : UIViewController<EDStarRatingProtocol>
+@interface RateViewController : UIViewController<EDStarRatingProtocol, UITextFieldDelegate>
 
 @end
