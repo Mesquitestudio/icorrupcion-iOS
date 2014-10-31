@@ -11,7 +11,6 @@
 		E331BD1319F54A8A00CB7023 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1219F54A8A00CB7023 /* IntroViewController.m */; };
 		E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */; };
 		E331BD1B19F5635B00CB7023 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1A19F5635B00CB7023 /* User.m */; };
-		E331BD1E19F564C400CB7023 /* Complaint.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1D19F564C400CB7023 /* Complaint.m */; };
 		E331BD2019F57ED500CB7023 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E331BD1F19F57ED500CB7023 /* CoreLocation.framework */; };
 		E334063719FE9A8C001D5B21 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E334063619FE9A8C001D5B21 /* AssetsLibrary.framework */; };
 		E334063919FE9A94001D5B21 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E334063819FE9A94001D5B21 /* AVFoundation.framework */; };
@@ -35,6 +34,7 @@
 		E383683D19E2E0FA00F85732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E383683B19E2E0FA00F85732 /* LaunchScreen.xib */; };
 		E383684919E2E0FA00F85732 /* iCorrupcio_nTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E383684819E2E0FA00F85732 /* iCorrupcio_nTests.m */; };
 		E383685619E2EB2300F85732 /* ComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E383685419E2EB2300F85732 /* ComplaintViewController.m */; };
+		E392686D1A0408E3007FC30D /* Complaint.m in Sources */ = {isa = PBXBuildFile; fileRef = E392686C1A0408E3007FC30D /* Complaint.m */; };
 		E3B1254619F0075500E84C2B /* MyDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1254519F0075500E84C2B /* MyDataViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -54,8 +54,6 @@
 		E331BD1619F5629C00CB7023 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		E331BD1919F5635B00CB7023 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		E331BD1A19F5635B00CB7023 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
-		E331BD1C19F564C400CB7023 /* Complaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complaint.h; sourceTree = "<group>"; };
-		E331BD1D19F564C400CB7023 /* Complaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complaint.m; sourceTree = "<group>"; };
 		E331BD1F19F57ED500CB7023 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E334063619FE9A8C001D5B21 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E334063819FE9A94001D5B21 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
@@ -94,6 +92,8 @@
 		E383684819E2E0FA00F85732 /* iCorrupcio_nTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCorrupcio_nTests.m; sourceTree = "<group>"; };
 		E383685319E2EB2300F85732 /* ComplaintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintViewController.h; sourceTree = "<group>"; };
 		E383685419E2EB2300F85732 /* ComplaintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplaintViewController.m; sourceTree = "<group>"; };
+		E392686B1A0408E3007FC30D /* Complaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complaint.h; sourceTree = "<group>"; };
+		E392686C1A0408E3007FC30D /* Complaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complaint.m; sourceTree = "<group>"; };
 		E3B1254419F0075500E84C2B /* MyDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataViewController.h; sourceTree = "<group>"; };
 		E3B1254519F0075500E84C2B /* MyDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataViewController.m; sourceTree = "<group>"; };
 		E9F191F1E2B74C6F96311346 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -163,8 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */,
-				E331BD1C19F564C400CB7023 /* Complaint.h */,
-				E331BD1D19F564C400CB7023 /* Complaint.m */,
+				E392686B1A0408E3007FC30D /* Complaint.h */,
+				E392686C1A0408E3007FC30D /* Complaint.m */,
 				E331BD1919F5635B00CB7023 /* User.h */,
 				E331BD1A19F5635B00CB7023 /* User.m */,
 			);
@@ -462,6 +462,7 @@
 			files = (
 				E334064719FEBBA3001D5B21 /* CustomAnnotation.m in Sources */,
 				E331BD1B19F5635B00CB7023 /* User.m in Sources */,
+				E392686D1A0408E3007FC30D /* Complaint.m in Sources */,
 				E3448F3A19ED8617006BE4A1 /* OfficeCell.m in Sources */,
 				E33F166E19E451D1009A90F7 /* OfficeViewController.m in Sources */,
 				E383683519E2E0FA00F85732 /* ViewController.m in Sources */,
@@ -470,7 +471,6 @@
 				E383683219E2E0FA00F85732 /* AppDelegate.m in Sources */,
 				E33F165E19E43AB3009A90F7 /* ViewCell.m in Sources */,
 				E331BD1319F54A8A00CB7023 /* IntroViewController.m in Sources */,
-				E331BD1E19F564C400CB7023 /* Complaint.m in Sources */,
 				E33F166919E44C5A009A90F7 /* InformationViewController.m in Sources */,
 				E383685619E2EB2300F85732 /* ComplaintViewController.m in Sources */,
 				E383682F19E2E0F900F85732 /* main.m in Sources */,

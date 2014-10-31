@@ -4,3 +4,4 @@ pod 'EDStarRating'
 pod "SIAlertView"
 pod "Mantle"
 pod "AFNetworking"
+pod "MagicalRecord"

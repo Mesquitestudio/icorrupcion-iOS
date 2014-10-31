@@ -5,6 +5,8 @@
 //
 
 #import "IAClient.h"
+#import "Complaint.h"
+#import <MagicalRecord/CoreData+MagicalRecord.h>
 #ifdef DEBUG
 #   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
@@ -63,6 +65,25 @@ static NSString *const kApplaudorAPIBaseURLString = @"http://192.168.120.24:8820
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
         }
         
+//        NSMutableDictionary *dictionary = responseObject;
+//        NSNumber *cid =  [cid numberFromString[dictionary objectForKey:@"complaint"] objectForKey:@"id"]];
+//        NSString *cname = [[dictionary objectForKey:@"complaint"] objectForKey:@"name"];
+//        NSString *cdescription = [[dictionary objectForKey:@"complaint"] objectForKey:@"description"];
+//        
+//        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+//            Complaint * complaint = [Complaint MR_createInContext:localContext];
+//            complaint.id = cid;
+//            complaint.title = @"";
+//            
+//        } completion:^(BOOL success, NSError *error) {
+//            if(success){
+//            }
+//            
+//        }];
+//        completionBlock(responseObject, nil);
+        
+
+        
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         DLog(@"\n============== ERROR Sending ====\n%@",error.userInfo);
         NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
@@ -79,8 +100,6 @@ static NSString *const kApplaudorAPIBaseURLString = @"http://192.168.120.24:8820
     
     [self POST:path parameters:paramsDict success:^(NSURLSessionDataTask *task, id responseObject) {
         DLog(@"\n============= Entities search Success ===\n%@",responseObject);
-        
-        completionBlock(responseObject, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         DLog(@"\n============== ERROR Sending ====\n%@",error.userInfo);
         NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
