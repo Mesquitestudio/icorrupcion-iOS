@@ -10,6 +10,7 @@
 #import "IAClient.h"
 
 @interface RateViewController ()
+
 @property (weak, nonatomic) IBOutlet EDStarRating *starRatingImage;
 @property (strong, nonatomic) IBOutlet UITextField *txtTitle;
 @property (strong, nonatomic) IBOutlet UITextField *txtDescription;
@@ -19,6 +20,7 @@
 @end
 
 @implementation RateViewController
+
 @synthesize starRatingImage = _starRatingImage;
 
 - (void)viewDidLoad {
@@ -53,10 +55,9 @@
     [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(finishEditing)]];
 }
 
-- (void)viewDidUnload
-{
-    [self setStarRatingImage:nil];
+- (void)viewDidUnload{
     [super viewDidUnload];
+    [self setStarRatingImage:nil];
     // Release any retained subviews of the main view.
 }
 

@@ -5,8 +5,9 @@
 //
 
 #import "IAClient.h"
-#import "Complaint.h"
+#import "Complaints.h"
 #import <MagicalRecord/CoreData+MagicalRecord.h>
+
 #ifdef DEBUG
 #   define DLog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else
@@ -46,8 +47,9 @@ static NSString *const kApplaudorAPIBaseURLString = @"http://192.168.120.24:8820
     return _sharedClient;
 }
 
-#pragma mark - send Complaint
--(void)sendComplaintWithParams:(NSDictionary *)paramsDict image:(UIImage *)image video:(NSData *)video onCompletion:(FetchDataCompletionBlock)completionBlock{
+#pragma mark - Complaint
+
+- (void)sendComplaintWithParams:(NSDictionary *)paramsDict image:(UIImage *)image video:(NSData *)video onCompletion:(FetchDataCompletionBlock)completionBlock{
     NSString *path = @"complaint";
     
     [self POST:path parameters:paramsDict constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
@@ -59,51 +61,36 @@ static NSString *const kApplaudorAPIBaseURLString = @"http://192.168.120.24:8820
             [formData appendPartWithFileData:video name:@"video" fileName:@"video.mov" mimeType:@"video/quicktime"];
         }
     } success:^(NSURLSessionDataTask *task, id responseObject) {
-        DLog(@"\n============= Send Correctly ===\n%@",responseObject);
         if (image != nil) {
-            //Save Media to Disk
             UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil);
         }
-        
-//        NSMutableDictionary *dictionary = responseObject;
-//        NSNumber *cid =  [cid numberFromString[dictionary objectForKey:@"complaint"] objectForKey:@"id"]];
-//        NSString *cname = [[dictionary objectForKey:@"complaint"] objectForKey:@"name"];
-//        NSString *cdescription = [[dictionary objectForKey:@"complaint"] objectForKey:@"description"];
-//        
-//        [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
-//            Complaint * complaint = [Complaint MR_createInContext:localContext];
-//            complaint.id = cid;
-//            complaint.title = @"";
-//            
-//        } completion:^(BOOL success, NSError *error) {
-//            if(success){
-//            }
-//            
-//        }];
-//        completionBlock(responseObject, nil);
-        
-
-        
+        completionBlock(responseObject, nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        DLog(@"\n============== ERROR Sending ====\n%@",error.userInfo);
-        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-        DLog(@"Response statusCode: %li", (long)response.statusCode);
         completionBlock(nil, error);
-        
     }];
 }
 
-#pragma mark - send Rate
--(void)sendRateWithParams:(NSDictionary *)paramsDict onCompletion:(FetchDataCompletionBlock)completionBlock{
+#pragma mark - Rate
+
+- (void)sendRateWithParams:(NSDictionary *)paramsDict onCompletion:(FetchDataCompletionBlock)completionBlock{
     
     NSString *path = [NSString stringWithFormat:@"ranking"];
     
     [self POST:path parameters:paramsDict success:^(NSURLSessionDataTask *task, id responseObject) {
-        DLog(@"\n============= Entities search Success ===\n%@",responseObject);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
-        DLog(@"\n============== ERROR Sending ====\n%@",error.userInfo);
-        NSHTTPURLResponse *response = (NSHTTPURLResponse *)task.response;
-        DLog(@"Response statusCode: %li", (long)response.statusCode);
+        completionBlock(nil, error);
+    }];
+}
+
+#pragma mark - Office
+
+- (void)getOfficeOnCompletion:(FetchDataCompletionBlock)completionBlock{
+    
+    NSString *path = [NSString stringWithFormat:@"office"];
+    
+    [self GET:path parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+        completionBlock(responseObject, nil);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
         completionBlock(nil, error);
     }];
 }

@@ -13,10 +13,16 @@ typedef void (^FetchDataCompletionBlock)(NSDictionary *responseObject, NSError *
 
 + (IAClient *)sharedClient;
 
-#pragma mark - send Complaint
--(void)sendComplaintWithParams:(NSDictionary *)paramsDict image:(UIImage *)image video:(NSData *)video onCompletion:(FetchDataCompletionBlock)completionBlock;
+#pragma mark - Complaint
 
-#pragma mark - send Rate
--(void)sendRateWithParams:(NSDictionary *)paramsDict onCompletion:(FetchDataCompletionBlock)completionBlock;
+- (void)sendComplaintWithParams:(NSDictionary *)paramsDict image:(UIImage *)image video:(NSData *)video onCompletion:(FetchDataCompletionBlock)completionBlock;
+
+#pragma mark - Rate
+
+- (void)sendRateWithParams:(NSDictionary *)paramsDict onCompletion:(FetchDataCompletionBlock)completionBlock;
+
+#pragma mark - Office
+
+- (void)getOfficeOnCompletion:(FetchDataCompletionBlock)completionBlock;
 
 @end

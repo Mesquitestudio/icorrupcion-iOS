@@ -10,6 +10,8 @@
 #import "MapDropPinViewController.h"
 #import "IAClient.h"
 #import "SIAlertView.h"
+#import <CoreData+MagicalRecord.h>
+#import "Complaints.h"
 
 @interface ComplaintViewController () <MapDropPinViewControllerDelegate>
 
@@ -25,7 +27,7 @@
 
 @property (strong) UIImage *ComplaintImage;
 @property (strong) NSData *ComplaintVideo;
-@property CLLocationCoordinate2D ComplaintCoordinate;
+@property (assign) CLLocationCoordinate2D ComplaintCoordinate;
 @property (strong) NSString *ComplaintSiteLatitude;
 @property (strong) NSString *ComplaintSiteLongitude;
 
@@ -33,11 +35,11 @@
 @property (strong) UIImagePickerController *cameraPicker;
 @property (strong) UIImagePickerController *videoPicker;
 
-@property BOOL bolAnonymouse;
-@property BOOL bolVideo;
-@property BOOL bolLocation;
-@property BOOL bolSite;
-@property BOOL bolErrorLocation;
+@property (assign) BOOL bolAnonymouse;
+@property (assign) BOOL bolVideo;
+@property (assign) BOOL bolLocation;
+@property (assign) BOOL bolSite;
+@property (assign) BOOL bolErrorLocation;
 
 @end
 
@@ -84,7 +86,6 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 
@@ -229,13 +230,20 @@
         else [paramsDict setObject:@""  forKey:@"longitude"];
         
         [[IAClient sharedClient] sendComplaintWithParams:paramsDict image:self.ComplaintImage video:self.ComplaintVideo onCompletion:^(NSDictionary *responseObject, NSError *responseError){
-            
             if(!responseError){
-                NSLog(@"enviado");
-            }else{
-                NSLog(@"no enviado");
+                [MagicalRecord saveWithBlock:^(NSManagedObjectContext *localContext) {
+                    NSDictionary *json = [responseObject objectForKey:@"complaint"];
+                    
+                    Complaints *complaint = [Complaints MR_createInContext:localContext];
+                    complaint.title = [json objectForKey:@"name"];
+                    complaint.complaints = [json objectForKey:@"description"];
+                    complaint.type = [NSNumber numberWithInt:2];
+                } completion:^(BOOL success, NSError *error) {
+                    if (success) {
+                        [self.navigationController popToRootViewControllerAnimated:YES];
+                    }
+                }];
             }
-            
         }];
     }
 }

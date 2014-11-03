@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AB9095D1A07F05100ECC1BC /* Office.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9095C1A07F05100ECC1BC /* Office.m */; };
+		2ACE4B971A08328800F49A60 /* Complaints.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE4B961A08328800F49A60 /* Complaints.m */; };
 		A732B51A819047A8AFB389B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC7840EEEFF4715A4038728 /* libPods.a */; };
 		E331BD1319F54A8A00CB7023 /* IntroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1219F54A8A00CB7023 /* IntroViewController.m */; };
 		E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */; };
@@ -34,7 +36,6 @@
 		E383683D19E2E0FA00F85732 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E383683B19E2E0FA00F85732 /* LaunchScreen.xib */; };
 		E383684919E2E0FA00F85732 /* iCorrupcio_nTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E383684819E2E0FA00F85732 /* iCorrupcio_nTests.m */; };
 		E383685619E2EB2300F85732 /* ComplaintViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E383685419E2EB2300F85732 /* ComplaintViewController.m */; };
-		E392686D1A0408E3007FC30D /* Complaint.m in Sources */ = {isa = PBXBuildFile; fileRef = E392686C1A0408E3007FC30D /* Complaint.m */; };
 		E3B1254619F0075500E84C2B /* MyDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E3B1254519F0075500E84C2B /* MyDataViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2AB9095B1A07F05100ECC1BC /* Office.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Office.h; sourceTree = "<group>"; };
+		2AB9095C1A07F05100ECC1BC /* Office.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Office.m; sourceTree = "<group>"; };
+		2ACE4B951A08328800F49A60 /* Complaints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Complaints.h; path = "iCorrupción/Complaints.h"; sourceTree = SOURCE_ROOT; };
+		2ACE4B961A08328800F49A60 /* Complaints.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Complaints.m; path = "iCorrupción/Complaints.m"; sourceTree = SOURCE_ROOT; };
+		A482BE2EFD60355D74A884A6 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		CF6AA2E93CCEA470D0A72051 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		E331BD1119F54A8A00CB7023 /* IntroViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IntroViewController.h; sourceTree = "<group>"; };
 		E331BD1219F54A8A00CB7023 /* IntroViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IntroViewController.m; sourceTree = "<group>"; };
 		E331BD1619F5629C00CB7023 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
@@ -92,11 +99,8 @@
 		E383684819E2E0FA00F85732 /* iCorrupcio_nTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iCorrupcio_nTests.m; sourceTree = "<group>"; };
 		E383685319E2EB2300F85732 /* ComplaintViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintViewController.h; sourceTree = "<group>"; };
 		E383685419E2EB2300F85732 /* ComplaintViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplaintViewController.m; sourceTree = "<group>"; };
-		E392686B1A0408E3007FC30D /* Complaint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Complaint.h; sourceTree = "<group>"; };
-		E392686C1A0408E3007FC30D /* Complaint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Complaint.m; sourceTree = "<group>"; };
 		E3B1254419F0075500E84C2B /* MyDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyDataViewController.h; sourceTree = "<group>"; };
 		E3B1254519F0075500E84C2B /* MyDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyDataViewController.m; sourceTree = "<group>"; };
-		E9F191F1E2B74C6F96311346 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 		ECC7840EEEFF4715A4038728 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -141,6 +145,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		79894EA4C20766A4897E0AA7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CF6AA2E93CCEA470D0A72051 /* Pods.debug.xcconfig */,
+				A482BE2EFD60355D74A884A6 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		E31707F31A0012F700380E15 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,10 +176,12 @@
 			isa = PBXGroup;
 			children = (
 				E331BD1519F5629C00CB7023 /* Model.xcdatamodeld */,
-				E392686B1A0408E3007FC30D /* Complaint.h */,
-				E392686C1A0408E3007FC30D /* Complaint.m */,
+				2ACE4B951A08328800F49A60 /* Complaints.h */,
+				2ACE4B961A08328800F49A60 /* Complaints.m */,
 				E331BD1919F5635B00CB7023 /* User.h */,
 				E331BD1A19F5635B00CB7023 /* User.m */,
+				2AB9095B1A07F05100ECC1BC /* Office.h */,
+				2AB9095C1A07F05100ECC1BC /* Office.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,9 +200,9 @@
 		E33F165A19E43A6E009A90F7 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E33F165B19E43A85009A90F7 /* ViewCell */,
 				E383683319E2E0FA00F85732 /* ViewController.h */,
 				E383683419E2E0FA00F85732 /* ViewController.m */,
+				E33F165B19E43A85009A90F7 /* ViewCell */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -204,9 +219,9 @@
 		E33F166A19E45186009A90F7 /* OfficeViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E3448F3719ED85F1006BE4A1 /* OfficeCell */,
 				E33F166C19E451D1009A90F7 /* OfficeViewController.h */,
 				E33F166D19E451D1009A90F7 /* OfficeViewController.m */,
+				E3448F3719ED85F1006BE4A1 /* OfficeCell */,
 			);
 			path = OfficeViewController;
 			sourceTree = "<group>";
@@ -235,8 +250,8 @@
 				E383682B19E2E0F900F85732 /* iCorrupción */,
 				E383684519E2E0FA00F85732 /* iCorrupciónTests */,
 				E383682A19E2E0F900F85732 /* Products */,
-				E9F191F1E2B74C6F96311346 /* Pods.xcconfig */,
 				60AC7F83B6AE44BDAF604607 /* Frameworks */,
+				79894EA4C20766A4897E0AA7 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -296,9 +311,9 @@
 		E383685219E2EAD300F85732 /* ComplaintViewController */ = {
 			isa = PBXGroup;
 			children = (
-				E334064219FEBB2B001D5B21 /* MapDropPinViewController */,
 				E383685319E2EB2300F85732 /* ComplaintViewController.h */,
 				E383685419E2EB2300F85732 /* ComplaintViewController.m */,
+				E334064219FEBB2B001D5B21 /* MapDropPinViewController */,
 			);
 			path = ComplaintViewController;
 			sourceTree = "<group>";
@@ -306,12 +321,12 @@
 		E383685819E2F71A00F85732 /* InformationViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E33F166719E44C5A009A90F7 /* InformationViewController.h */,
+				E33F166819E44C5A009A90F7 /* InformationViewController.m */,
 				E331BD0F19F54A3F00CB7023 /* IntroViewController */,
 				E3B1254319F0065400E84C2B /* MyDataViewController */,
 				E33F166A19E45186009A90F7 /* OfficeViewController */,
 				E33F166B19E45186009A90F7 /* RateViewController */,
-				E33F166719E44C5A009A90F7 /* InformationViewController.h */,
-				E33F166819E44C5A009A90F7 /* InformationViewController.m */,
 			);
 			path = InformationViewController;
 			sourceTree = "<group>";
@@ -435,7 +450,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		52961703AA7A45949E503C58 /* Check Pods Manifest.lock */ = {
@@ -462,7 +477,8 @@
 			files = (
 				E334064719FEBBA3001D5B21 /* CustomAnnotation.m in Sources */,
 				E331BD1B19F5635B00CB7023 /* User.m in Sources */,
-				E392686D1A0408E3007FC30D /* Complaint.m in Sources */,
+				2AB9095D1A07F05100ECC1BC /* Office.m in Sources */,
+				2ACE4B971A08328800F49A60 /* Complaints.m in Sources */,
 				E3448F3A19ED8617006BE4A1 /* OfficeCell.m in Sources */,
 				E33F166E19E451D1009A90F7 /* OfficeViewController.m in Sources */,
 				E383683519E2E0FA00F85732 /* ViewController.m in Sources */,
@@ -596,7 +612,7 @@
 		};
 		E383684D19E2E0FA00F85732 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9F191F1E2B74C6F96311346 /* Pods.xcconfig */;
+			baseConfigurationReference = CF6AA2E93CCEA470D0A72051 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iCorrupción/Info.plist";
@@ -608,7 +624,7 @@
 		};
 		E383684E19E2E0FA00F85732 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9F191F1E2B74C6F96311346 /* Pods.xcconfig */;
+			baseConfigurationReference = A482BE2EFD60355D74A884A6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "iCorrupción/Info.plist";

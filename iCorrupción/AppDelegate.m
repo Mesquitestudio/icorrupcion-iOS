@@ -1,3 +1,4 @@
+
 //
 //  AppDelegate.m
 //  iCorrupción
@@ -8,6 +9,8 @@
 
 #import "AppDelegate.h"
 #import <CoreLocation/CoreLocation.h>
+#import <MagicalRecord.h>
+#import <CoreData+MagicalRecord.h>
 
 @interface AppDelegate ()
 
@@ -19,7 +22,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+    
+    [self setupDB];
+    
     return YES;
+}
+
+- (void)setupDB
+{
+    [MagicalRecord setDefaultModelNamed:@"Model.momd"];
+    [MagicalRecord setupCoreDataStack];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
@@ -38,12 +50,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
-    if (![CLLocationManager locationServicesEnabled] || ![CLLocationManager     authorizationStatus]){
-        NSLog(@"No activo");
-    }
-    else{
-        NSLog(@"activo");
-    }
+    [CLLocationManager locationServicesEnabled] || ![CLLocationManager     authorizationStatus];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {

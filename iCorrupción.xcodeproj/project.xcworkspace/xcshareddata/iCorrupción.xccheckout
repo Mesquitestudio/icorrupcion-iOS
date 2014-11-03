@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>FEAFAE3B-8AE5-4B56-888B-50563CCD4CDD</string>
+	<string>FD785B0C-5EEA-4F32-8E24-FD57B0410037</string>
 	<key>IDESourceControlProjectName</key>
 	<string>iCorrupción</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>gitlab:ios/icorrupcion-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>iCorrupción.xcworkspace</string>
+	<string>iCorrupción.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>450AC0020BC14F1633B1D21EFC1F282107D078B4</key>
-		<string>..</string>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>gitlab:ios/icorrupcion-ios.git</string>

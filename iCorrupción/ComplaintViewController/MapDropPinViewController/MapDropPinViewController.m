@@ -65,7 +65,6 @@
     CustomAnnotation *currentPosAnnotation = [[CustomAnnotation alloc] initWithTitle:self.pinTitle subtitle:nil identifier:[NSNumber numberWithInt:1] andCoordinate:coordinate];
     self.theAnnocation = currentPosAnnotation;
     
-    self.theMapView.delegate = self;
     
     
     if(self.fixedEntityAnnotation){ //when displaying the position of an Entity.. READ ONLY
@@ -92,11 +91,17 @@
         cancelString = NSLocalizedString(@"Cerrar", @"Cerrar");
     }
     
+    //Navigation Items
     UIBarButtonItem *leftButton = [[UIBarButtonItem alloc] initWithTitle:cancelString
-                                                                    style:UIBarButtonItemStyleDone  target:self action:@selector(close)];
+                                                                    style:UIBarButtonItemStyleDone
+                                                                  target:self
+                                                                  action:@selector(close)];
     self.navigationItem.leftBarButtonItem = leftButton;
     
     
+    //Map
+    [self.theMapView setDelegate:self];
+
 }
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
@@ -120,6 +125,7 @@
 }
 
 #pragma mark - MapView Delegates
+
 - (MKAnnotationView *) mapView: (MKMapView *) mapView viewForAnnotation: (id<MKAnnotation>) annotation {
     if ([annotation isKindOfClass:[MKUserLocation class]])
         return nil;  //return nil to use default blue dot view
@@ -128,32 +134,25 @@
     if (pin == nil) {
         pin = [[MKPinAnnotationView alloc] initWithAnnotation: annotation reuseIdentifier: @"myPin"];
     } else {
-        
         pin.annotation = annotation;
     }
     
-    pin.canShowCallout = YES;
+    [pin setCanShowCallout:YES];
     [pin setSelected:YES];
-    pin.animatesDrop = YES;
-    pin.draggable = YES;
-    if (self.fixedEntityAnnotation) {
-        pin.draggable = NO;
-    }
-
+    [pin setAnimatesDrop:YES];
+    [pin setDraggable:YES];
     
     return pin;
 }
 
-- (void)mapView:(MKMapView *)mapView
- annotationView:(MKAnnotationView *)annotationView
-didChangeDragState:(MKAnnotationViewDragState)newState
-   fromOldState:(MKAnnotationViewDragState)oldState
+- (void)mapView:(MKMapView *)mapView annotationView:(MKAnnotationView *)annotationView didChangeDragState:(MKAnnotationViewDragState)newState fromOldState:(MKAnnotationViewDragState)oldState
 {
     if (newState == MKAnnotationViewDragStateEnding)
     {
         self.theAnnocation = annotationView.annotation;
     }
 }
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
