@@ -79,7 +79,7 @@ Ademas de las denuncias en el app estará una sección informativa donde el usua
 - JQuery
 
 ##Demo Video
-- [http://icorrupcion.mesquitestudio.com](http://icorrupcion.mesquitestudio.com)
+[![iCorrupcion](http://img.youtube.com/vi/Jo5ZkDNN248/0.jpg)](http://www.youtube.com/watch?v=Jo5ZkDNN248)
 
 ##Demo BACKEND
 - [http://icorrupcion.mesquitestudio.com](http://icorrupcion.mesquitestudio.com)
