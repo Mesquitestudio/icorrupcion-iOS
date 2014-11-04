@@ -9,63 +9,85 @@
 #import "ViewController.h"
 #import "ViewCell.h"
 #import "ComplaintViewController.h"
+#import "ComplaintDetailViewController.h"
 #import <MZFormSheetController.h>
+#import "Complaints.h"
+#import <CoreData+MagicalRecord.h>
 
 @interface ViewController ()
+
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
+@property (strong) NSArray *complaintsArray;
 
 @end
 
 @implementation ViewController
 
+#pragma mark - UIViewController
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
     
+//    self.complaintsArray = [Complaints MR_findAll];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    self.complaintsArray = [Complaints MR_findAll];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table View
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 1;
+#pragma mark - Navigation
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    //NSString *ID = [segue identifier];
 }
+
+#pragma mark - UITableViewDataSource
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 4;
+    if (self.complaintsArray.count != 0) {
+        return self.complaintsArray.count;
+    }
+    return 0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *CellIdentifier = @"ViewCell";
     
     ViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    Complaints *complaint = [self.complaintsArray objectAtIndex:indexPath.row];
     
-    if ([indexPath row] == 0) {
-        cell.cellViewImage.image = [UIImage imageNamed:@"denuncia1"];
-        cell.backgroundColor = [UIColor colorWithRed:((float) 227.0 / 255.0f) green:((float) 100.0 / 255.0f) blue:((float) 75.0 / 255.0f) alpha:1.0f];
-//        [self performSegueWithIdentifier:@"Save" sender:self];
+    switch ([complaint.type intValue]) {
+        case 2:{
+            cell.cellViewImage.image = [UIImage imageNamed:@"denuncia2"];
+            cell.backgroundColor = [UIColor colorWithRed:((float) 233.0 / 255.0f) green:((float) 128.0 / 255.0f) blue:((float) 79.0 / 255.0f) alpha:1.0f];
+            break;
+        }
+        case 3:{
+            cell.cellViewImage.image = [UIImage imageNamed:@"denuncia3"];
+            cell.backgroundColor = [UIColor colorWithRed:((float) 239.0 / 255.0f) green:((float) 157.0 / 255.0f) blue:((float) 82.0 / 255.0f) alpha:1.0f];
+            break;
+        }
+        case 4:{
+            cell.cellViewImage.image = [UIImage imageNamed:@"denuncia4"];
+            cell.backgroundColor = [UIColor colorWithRed:((float) 239.0 / 255.0f) green:((float) 184.0 / 255.0f) blue:((float) 86.0 / 255.0f) alpha:1.0f];
+            break;
+        }
+        default:
+            cell.cellViewImage.image = [UIImage imageNamed:@"denuncia1"];
+            cell.backgroundColor = [UIColor colorWithRed:((float) 227.0 / 255.0f) green:((float) 100.0 / 255.0f) blue:((float) 75.0 / 255.0f) alpha:1.0f];
+            break;
     }
-    
-    else if ([indexPath row] == 1) {
-        cell.cellViewImage.image = [UIImage imageNamed:@"denuncia2"];
-        cell.backgroundColor = [UIColor colorWithRed:((float) 233.0 / 255.0f) green:((float) 128.0 / 255.0f) blue:((float) 79.0 / 255.0f) alpha:1.0f];
-    }
-    
-    else if ([indexPath row] == 2) {
-        cell.cellViewImage.image = [UIImage imageNamed:@"denuncia3"];
-        cell.backgroundColor = [UIColor colorWithRed:((float) 239.0 / 255.0f) green:((float) 157.0 / 255.0f) blue:((float) 82.0 / 255.0f) alpha:1.0f];
-    }
-    
-    else if ([indexPath row] == 3) {
-        cell.cellViewImage.image = [UIImage imageNamed:@"denuncia4"];
-        cell.backgroundColor = [UIColor colorWithRed:((float) 239.0 / 255.0f) green:((float) 184.0 / 255.0f) blue:((float) 86.0 / 255.0f) alpha:1.0f];
-    }
+    cell.cellViewName.text = complaint.title;
     
     return cell;
 }
+
+#pragma mark - UITableViewDelegate
 
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section {
     return 0.01f;
@@ -76,25 +98,12 @@
     return 100.0f;
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    NSString *ID = [segue identifier];
-    
-    if([ID isEqualToString:@"New"])
-    {
-//        ComplaintViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"New"];
-//        
-//        // present form sheet with view controller
-//        [self mz_presentFormSheetController:vc animated:YES completionHandler:^(MZFormSheetController *formSheetController) {
-//            //do sth
-//        }];
-//        
-    }
-//    else if ([ID isEqualToString:@"Save"]){
-//        
-//    }
-//    
-//    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Complaints *complaint = [self.complaintsArray objectAtIndex:indexPath.row];
+    ComplaintDetailViewController *complaintDetailVC = [[self storyboard] instantiateViewControllerWithIdentifier:@"ComplaintDetailViewController"];
+    [complaintDetailVC setComplaint:complaint];
+    [[self navigationController] pushViewController:complaintDetailVC animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end

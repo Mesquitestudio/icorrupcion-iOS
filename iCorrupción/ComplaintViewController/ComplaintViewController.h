@@ -10,7 +10,9 @@
 #import <CoreLocation/CoreLocation.h>
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <MediaPlayer/MediaPlayer.h>
+#import "CustomAnnotation.h"
 
-@interface ComplaintViewController : UIViewController <UIImagePickerControllerDelegate, CLLocationManagerDelegate, UINavigationControllerDelegate>
-
+@interface ComplaintViewController : UIViewController <UIImagePickerControllerDelegate, CLLocationManagerDelegate, UINavigationControllerDelegate, UITextFieldDelegate>
+-(void)mapDropPinDidFinish:(CustomAnnotation *)annotation;
+-(void)mapDroPinCancel;
 @end

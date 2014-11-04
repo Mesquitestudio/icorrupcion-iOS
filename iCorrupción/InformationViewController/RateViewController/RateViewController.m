@@ -7,15 +7,21 @@
 //
 
 #import "RateViewController.h"
+#import "IAClient.h"
 
 @interface RateViewController ()
+
 @property (weak, nonatomic) IBOutlet EDStarRating *starRatingImage;
+@property (strong, nonatomic) IBOutlet UITextField *txtTitle;
+@property (strong, nonatomic) IBOutlet UITextField *txtDescription;
+@property (strong, nonatomic) IBOutlet UIButton *btnSend;
+@property (strong) NSString *strRate;
 
 @end
 
 @implementation RateViewController
-@synthesize starRatingImage = _starRatingImage;
 
+@synthesize starRatingImage = _starRatingImage;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -40,12 +46,18 @@
     {
         [self starsSelectionChanged:_starRatingImage rating:rating];
     };
+    
+    //**** Textfield delegate ****//
+    self.txtTitle.delegate = self;
+    self.txtDescription.delegate = self;
+    
+    //**** Hide Keyboard ****//
+    [self.view addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(finishEditing)]];
 }
 
-- (void)viewDidUnload
-{
-    [self setStarRatingImage:nil];
+- (void)viewDidUnload{
     [super viewDidUnload];
+    [self setStarRatingImage:nil];
     // Release any retained subviews of the main view.
 }
 
@@ -54,15 +66,47 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
+#pragma mark - save
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (BOOL)validateRate
+{
+    if(self.txtTitle.text.length == 0 && self.txtDescription.text.length == 0){
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Aviso", @"Titulo de alerta para nombre faltante en entidad") message:NSLocalizedString(@"El título y el comentario no pueden estar vacíos", @"Aviso") delegate:nil cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+        [alert show];
+        return NO;
+    }
+    return YES;
 }
-*/
+
+- (IBAction)btnSend:(id)sender {
+    
+    if ([self validateRate]) {
+
+    NSMutableDictionary *paramsDict = [NSMutableDictionary dictionaryWithDictionary:
+                                       @{@"title":self.txtTitle.text,
+                                         @"description":self.txtDescription.text,
+                                         @"score": [NSString stringWithFormat:@"%d", (int) _starRatingImage.rating]
+                                         }];
+    
+    [[IAClient sharedClient] sendRateWithParams:paramsDict onCompletion:^(NSDictionary *responseObject, NSError *responseError){
+
+        if(!responseError){
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gracias"
+                                                            message:@"Gracias por calificarnos" delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            
+            [self.navigationController popViewControllerAnimated:YES];
+        }else{
+            NSLog(@"no enviado");
+        }
+        
+    }];
+    }
+
+}
+
 
 - (void)back
 {
@@ -71,6 +115,17 @@
 
 -(void)starsSelectionChanged:(EDStarRating *)control rating:(float)rating
 {
-    NSString *ratingString = [NSString stringWithFormat:@"Rating: %.1f", rating];
+     self.strRate = [NSString stringWithFormat:@"Rating: %.1f", rating];
+}
+
+#pragma mark - UITextField delegates
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    [textField resignFirstResponder];
+    return NO;
+}
+
+-(void)finishEditing
+{
+    [self.view endEditing:YES];
 }
 @end
