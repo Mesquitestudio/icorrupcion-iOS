@@ -76,6 +76,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="3xd-kW-hoq" id="JcH-ai-6jr"/>
+                        <segue destination="K9Q-jx-ZEC" kind="show" identifier="ComplaintDetail" id="9GG-lj-AiV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -455,7 +456,7 @@
                                     <action selector="btnSend:" destination="qBv-AW-AS0" eventType="touchUpInside" id="QGe-qy-50W"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8gt-Yf-o7b">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8gt-Yf-o7b">
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abl-u6-O5O">
@@ -602,6 +603,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iDp-Ny-Sqx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1594" y="401"/>
+        </scene>
+        <!--Complaint Detail View Controller-->
+        <scene sceneID="2IX-Y3-vtm">
+            <objects>
+                <viewController storyboardIdentifier="ComplaintDetailViewController" id="K9Q-jx-ZEC" customClass="ComplaintDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S8A-U6-6ic"/>
+                        <viewControllerLayoutGuide type="bottom" id="MqU-eI-eer"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xu8-Bh-49G">
+                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Num. Folio: 123456789" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXF-b9-kNv">
+                                <rect key="frame" x="16" y="156" width="568" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDf-a3-zUf">
+                                <rect key="frame" x="0.0" y="570" width="530" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPh-tv-Tb1">
+                                <rect key="frame" x="538" y="570" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-li-CQ6">
+                                <rect key="frame" x="16" y="67" width="288" height="81"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="complaintsTextField" destination="pUo-li-CQ6" id="E9G-cE-mc2"/>
+                        <outlet property="folioLabel" destination="yXF-b9-kNv" id="bcu-gh-90e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qqu-lR-bJr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1344" y="1139"/>
         </scene>
         <!--Mis Datos-->
         <scene sceneID="9pL-pI-puK">

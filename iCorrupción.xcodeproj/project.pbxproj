@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174685641A0840FA00FCB5B4 /* ComplaintDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 174685631A0840FA00FCB5B4 /* ComplaintDetailViewController.m */; };
 		2AB9095D1A07F05100ECC1BC /* Office.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AB9095C1A07F05100ECC1BC /* Office.m */; };
 		2ACE4B971A08328800F49A60 /* Complaints.m in Sources */ = {isa = PBXBuildFile; fileRef = 2ACE4B961A08328800F49A60 /* Complaints.m */; };
 		A732B51A819047A8AFB389B1 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECC7840EEEFF4715A4038728 /* libPods.a */; };
@@ -50,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		174685621A0840FA00FCB5B4 /* ComplaintDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComplaintDetailViewController.h; sourceTree = "<group>"; };
+		174685631A0840FA00FCB5B4 /* ComplaintDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComplaintDetailViewController.m; sourceTree = "<group>"; };
 		2AB9095B1A07F05100ECC1BC /* Office.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Office.h; sourceTree = "<group>"; };
 		2AB9095C1A07F05100ECC1BC /* Office.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Office.m; sourceTree = "<group>"; };
 		2ACE4B951A08328800F49A60 /* Complaints.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Complaints.h; path = "iCorrupción/Complaints.h"; sourceTree = SOURCE_ROOT; };
@@ -130,6 +133,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		174685611A08408E00FCB5B4 /* ComplaintDetail */ = {
+			isa = PBXGroup;
+			children = (
+				174685621A0840FA00FCB5B4 /* ComplaintDetailViewController.h */,
+				174685631A0840FA00FCB5B4 /* ComplaintDetailViewController.m */,
+			);
+			name = ComplaintDetail;
+			sourceTree = "<group>";
+		};
 		60AC7F83B6AE44BDAF604607 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +279,7 @@
 		E383682B19E2E0F900F85732 /* iCorrupción */ = {
 			isa = PBXGroup;
 			children = (
+				174685611A08408E00FCB5B4 /* ComplaintDetail */,
 				E31707F31A0012F700380E15 /* Networking */,
 				E331BD1419F5626000CB7023 /* Model */,
 				E383683019E2E0F900F85732 /* AppDelegate.h */,
@@ -490,6 +503,7 @@
 				E33F166919E44C5A009A90F7 /* InformationViewController.m in Sources */,
 				E383685619E2EB2300F85732 /* ComplaintViewController.m in Sources */,
 				E383682F19E2E0F900F85732 /* main.m in Sources */,
+				174685641A0840FA00FCB5B4 /* ComplaintDetailViewController.m in Sources */,
 				E37297CC1A029584009BF65D /* IAClient.m in Sources */,
 				E334064819FEBBA3001D5B21 /* MapDropPinViewController.m in Sources */,
 				E331BD1719F5629C00CB7023 /* Model.xcdatamodeld in Sources */,
@@ -619,6 +633,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9b099489-8938-4fbe-b6f2-1a7ba0f7c51b";
 			};
 			name = Debug;
 		};
@@ -627,6 +642,7 @@
 			baseConfigurationReference = A482BE2EFD60355D74A884A6 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				INFOPLIST_FILE = "iCorrupción/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

@@ -235,6 +235,7 @@
                     NSDictionary *json = [responseObject objectForKey:@"complaint"];
                     
                     Complaints *complaint = [Complaints MR_createInContext:localContext];
+                    complaint.id = [json objectForKey:@"id"];
                     complaint.title = [json objectForKey:@"name"];
                     complaint.complaints = [json objectForKey:@"description"];
                     complaint.type = [NSNumber numberWithInt:2];

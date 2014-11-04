@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "ViewCell.h"
 #import "ComplaintViewController.h"
+#import "ComplaintDetailViewController.h"
 #import <MZFormSheetController.h>
 #import "Complaints.h"
 #import <CoreData+MagicalRecord.h>
@@ -27,6 +28,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    self.complaintsArray = [Complaints MR_findAll];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
     self.complaintsArray = [Complaints MR_findAll];
 }
 
@@ -90,6 +96,14 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100.0f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    Complaints *complaint = [self.complaintsArray objectAtIndex:indexPath.row];
+    ComplaintDetailViewController *complaintDetailVC = [[self storyboard] instantiateViewControllerWithIdentifier:@"ComplaintDetailViewController"];
+    [complaintDetailVC setComplaint:complaint];
+    [[self navigationController] pushViewController:complaintDetailVC animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
