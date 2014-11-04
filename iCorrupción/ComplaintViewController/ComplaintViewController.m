@@ -204,7 +204,7 @@
                                              @"cdescription":self.txtDescription.text,
                                              }];
         
-        if (self.bolAnonymouse) {
+        if (self.bolAnonymouse && [[NSUserDefaults standardUserDefaults] objectForKey:@"UserDictionary"]) {
             NSMutableDictionary  *UserDictionary = [[NSUserDefaults standardUserDefaults] objectForKey:@"UserDictionary"];
             [paramsDict setObject:[UserDictionary objectForKey:@"uname"] forKey:@"uname"];
             [paramsDict setObject:[UserDictionary objectForKey:@"uemail"] forKey:@"uemail"];

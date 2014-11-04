@@ -12,6 +12,7 @@
 @interface ComplaintDetailViewController : UIViewController
 
 @property Complaints *complaint;
+
 @property (weak, nonatomic) IBOutlet UITextView *complaintsTextField;
 @property (weak, nonatomic) IBOutlet UILabel *folioLabel;
 

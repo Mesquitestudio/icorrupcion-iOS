@@ -17,34 +17,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
 
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [self.navigationController setTitle:self.complaint.title];
-    [self.complaintsTextField setText:self.complaint.complaints];
-    [self.folioLabel setText:[NSString stringWithFormat:@"Num. Folio: %@", self.complaint.id]];
+- (void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:animated];
+
+    [self setTitle:self.complaint.title];
+    [self.complaintsTextField setText:self.complaint.complaints];
+    [self.complaintsTextField setFont:[UIFont fontWithName:@"Helvetica" size:16.0f]];
+    [self.folioLabel setText:[NSString stringWithFormat:@"Num. Folio: %@", self.complaint.id]];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
 }
 
 @end

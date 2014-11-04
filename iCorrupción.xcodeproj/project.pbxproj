@@ -279,7 +279,6 @@
 		E383682B19E2E0F900F85732 /* iCorrupción */ = {
 			isa = PBXGroup;
 			children = (
-				174685611A08408E00FCB5B4 /* ComplaintDetail */,
 				E31707F31A0012F700380E15 /* Networking */,
 				E331BD1419F5626000CB7023 /* Model */,
 				E383683019E2E0F900F85732 /* AppDelegate.h */,
@@ -287,6 +286,7 @@
 				E383683619E2E0FA00F85732 /* Main.storyboard */,
 				E33F165A19E43A6E009A90F7 /* ViewController */,
 				E383685219E2EAD300F85732 /* ComplaintViewController */,
+				174685611A08408E00FCB5B4 /* ComplaintDetail */,
 				E383685819E2F71A00F85732 /* InformationViewController */,
 				E383683919E2E0FA00F85732 /* Images.xcassets */,
 				E383683B19E2E0FA00F85732 /* LaunchScreen.xib */,

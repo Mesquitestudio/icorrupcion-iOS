@@ -91,7 +91,13 @@
     [[IAClient sharedClient] sendRateWithParams:paramsDict onCompletion:^(NSDictionary *responseObject, NSError *responseError){
 
         if(!responseError){
-            NSLog(@"enviado");
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Gracias"
+                                                            message:@"Gracias por calificarnos" delegate:nil
+                                                  cancelButtonTitle:@"Ok"
+                                                  otherButtonTitles:nil];
+            [alert show];
+            
+            [self.navigationController popViewControllerAnimated:YES];
         }else{
             NSLog(@"no enviado");
         }

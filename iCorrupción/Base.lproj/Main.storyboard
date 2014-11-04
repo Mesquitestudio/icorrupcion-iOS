@@ -404,6 +404,7 @@
                                         <rect key="frame" x="13" y="111" width="295" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D3G-fw-D9g" userLabel="Line Horizontal">
+                                                <rect key="frame" x="10" y="40" width="230" height="2"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Descripción" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OaS-vt-r2n">
@@ -428,6 +429,7 @@
                                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             </textField>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xdi-hq-9nI" userLabel="Line Horizontal">
+                                                <rect key="frame" x="10" y="40" width="230" height="2"/>
                                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                         </subviews>
@@ -617,31 +619,47 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Num. Folio: 123456789" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yXF-b9-kNv">
-                                <rect key="frame" x="16" y="156" width="568" height="21"/>
+                                <rect key="frame" x="16" y="160" width="568" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDf-a3-zUf">
-                                <rect key="frame" x="0.0" y="570" width="530" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mensaje" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MDf-a3-zUf">
+                                <rect key="frame" x="4" y="532" width="283" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="kyW-Fd-l4C"/>
+                                    <constraint firstAttribute="width" constant="283" id="toN-qd-48D"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPh-tv-Tb1">
-                                <rect key="frame" x="538" y="570" width="46" height="30"/>
-                                <state key="normal" title="Button">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPh-tv-Tb1">
+                                <rect key="frame" x="287" y="534" width="26" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="26" id="bWF-bF-HvI"/>
+                                    <constraint firstAttribute="height" constant="26" id="fpF-Uf-CfO"/>
+                                </constraints>
+                                <state key="normal" image="enviar">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pUo-li-CQ6">
-                                <rect key="frame" x="16" y="67" width="288" height="81"/>
+                                <rect key="frame" x="10" y="72" width="300" height="80"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="GPh-tv-Tb1" secondAttribute="trailing" constant="-9" id="4R2-WQ-vkf"/>
+                            <constraint firstItem="MDf-a3-zUf" firstAttribute="leading" secondItem="xu8-Bh-49G" secondAttribute="leadingMargin" constant="-12" id="9h3-lH-Mjv"/>
+                            <constraint firstItem="MqU-eI-eer" firstAttribute="top" secondItem="MDf-a3-zUf" secondAttribute="bottom" constant="6" id="GMa-z6-fwv"/>
+                            <constraint firstItem="GPh-tv-Tb1" firstAttribute="leading" secondItem="MDf-a3-zUf" secondAttribute="trailing" id="Hy9-B8-a52"/>
+                            <constraint firstItem="GPh-tv-Tb1" firstAttribute="leading" secondItem="MDf-a3-zUf" secondAttribute="trailing" id="OSm-u8-hoP"/>
+                            <constraint firstItem="MqU-eI-eer" firstAttribute="top" secondItem="GPh-tv-Tb1" secondAttribute="bottom" constant="8" id="qdV-Gx-OPe"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
@@ -834,6 +852,7 @@
         <image name="calificanos" width="41" height="50"/>
         <image name="comollegar" width="106" height="57"/>
         <image name="cuenta" width="50" height="60"/>
+        <image name="enviar" width="21" height="21"/>
         <image name="facebook" width="50" height="50"/>
         <image name="foto" width="106" height="107"/>
         <image name="guia" width="50" height="60"/>

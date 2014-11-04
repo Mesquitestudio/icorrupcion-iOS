@@ -15,7 +15,7 @@
 #endif
 
 
-static NSString *const kApplaudorAPIBaseURLString = @"http://192.168.120.24:8820/ws";
+static NSString *const kApplaudorAPIBaseURLString = @"http://icorrupcion.mesquitestudio.com/ws";
 
 @interface IAClient()
 
@@ -77,6 +77,7 @@ static NSString *const kApplaudorAPIBaseURLString = @"http://192.168.120.24:8820
     NSString *path = [NSString stringWithFormat:@"ranking"];
     
     [self POST:path parameters:paramsDict success:^(NSURLSessionDataTask *task, id responseObject) {
+        completionBlock(responseObject,nil);
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
         completionBlock(nil, error);
     }];

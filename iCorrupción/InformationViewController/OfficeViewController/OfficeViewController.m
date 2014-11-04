@@ -11,6 +11,7 @@
 #import "IAClient.h"
 #import "Office.h"
 #import <UIImageView+AFNetworking.h>
+#import <MapKit/MapKit.h>
 
 @interface OfficeViewController ()
 
@@ -65,20 +66,25 @@
 #pragma mark - Methods
 
 - (void)callOffice:(NSString *)office{
-    NSURL *url = [NSURL URLWithString:office];
+    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"tel://%@",office]];
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
         [[UIApplication sharedApplication] openURL:url];
     }
 }
 
 - (void)openMap:(CLLocationCoordinate2D)coor{
-    NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"http://maps.apple.com/?ll=%f,%f&z=10",coor.latitude,coor.longitude]];
-    if ([[UIApplication sharedApplication] canOpenURL:url]) {
-        [[UIApplication sharedApplication] openURL:url];
-    }
+    MKPlacemark *placemark = [[MKPlacemark alloc] initWithCoordinate:coor addressDictionary:nil];
+    MKMapItem *item = [[MKMapItem alloc] initWithPlacemark:placemark];
+    [item openInMapsWithLaunchOptions:@{MKLaunchOptionsDirectionsModeKey:MKLaunchOptionsDirectionsModeDriving}];
 }
 
-- (void)openInfo{
+- (void)openInfo:(NSString *)msg{
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Informacion"
+                                                    message:msg
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil];
+    [alert show];
 }
 
 #pragma mark - UITableViewDataSource
@@ -108,7 +114,7 @@
     }];
     
     [cell setDidTapInfoButtonBlock:^(id sender) {
-        
+        [self openInfo:office.timetable];
     }];
     
     return cell;
